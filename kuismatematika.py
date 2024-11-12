@@ -6,6 +6,7 @@ print("Halo " +nama, ", selamat datang di game")
 print("Jawablah soal yang muncul di layar, Jawaban yang benar akan mendapatkan poin")
 input("(ENTER)")
 
+
 while chance > 0:
     if poin < 75:
         print("Dapatkan poin tertinggi dan menangkan hadiah menarik")
