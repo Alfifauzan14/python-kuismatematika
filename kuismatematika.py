@@ -10,7 +10,7 @@ def tampilkan_menu():
     print("="*30)
 
 def soal_matematika():
-    # List soal yang akan di-generate
+    
     soal = [
         ("Berapa 5 + 3?", 8),
         ("Berapa 12 - 4?", 8),
@@ -22,17 +22,16 @@ def soal_matematika():
         ("Berapa 24 ÷ 6?", 4)
     ]
     
-    random.shuffle(soal)  # Mengacak urutan soal
+    random.shuffle(soal)
     
     skor = 0
-    kesempatan = 3  # Jumlah kesempatan untuk menjawab soal
+    kesempatan = 3
     
     total_soal = len(soal)
     
     print("\nKuis Dimulai! Jawablah soal-soal berikut dengan benar.")
-    time.sleep(1)  # Delay untuk memberikan efek dramatis
+    time.sleep(1)
 
-    # Menampilkan soal dan memeriksa jawaban
     for i, (pertanyaan, jawaban_benar) in enumerate(soal):
         if kesempatan == 0:
             print("\nAnda telah kehabisan kesempatan. Kuis selesai!")
@@ -45,14 +44,14 @@ def soal_matematika():
             
             if jawaban == jawaban_benar:
                 print("Jawaban Anda Benar!\n")
-                skor += 10  # Poin yang didapatkan jika jawaban benar
+                skor += 10
             else:
                 print(f"Jawaban Anda Salah. Jawaban yang benar adalah {jawaban_benar}.\n")
-                kesempatan -= 1  # Mengurangi kesempatan jika jawabannya salah
+                kesempatan -= 1
                 
         except ValueError:
             print("Harap masukkan angka yang valid.\n")
-            kesempatan -= 1  # Mengurangi kesempatan jika terjadi input tidak valid
+            kesempatan -= 1
     
     print(f"\nKuis selesai! Anda mendapatkan {skor} poin dengan {kesempatan} kesempatan tersisa.")
 
